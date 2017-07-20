@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<div class="imgcontainer">
+
+</div>
+<h1><center> Enterprise SiteMinder login</center><h1>
+    <script src="assets/js/login.js"></script>
+    <style>
+hr.divider{
+    border-top: 1px dashed #8c8b8b ;
+    text-align: center;
+    overflow: visible;
+}
+hr.divider:after {
+    content: 'OR';
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    padding: 0 10px;
+    background: #F7F7F7 ;
+    color: #000000 ;
+    font-size: 3px;
+}
+</style>
+    </head>
+
+   <body>
+    <div class="login-card">
+        <p class="profile-name-card"> <!--<img src="assets/img/Comcast-Logo.png" width="250"><!--><center><img src="http://corporate.comcast.com/images/Comcast-Logo.png" width="250"></center></p>
+        <center><font size="3">Or, Log-in with </font><button class="btn btn-primary btn-block btn-lg windows-signin" type="submit" value="Auto Sign in" onclick="action_target();"><a href="login.html">F.A.C.E</a></button></center>
+
+       <center><form class="form-signin" name="login" action="login.fcc" method="post" onsubmit="return validateForm()"><span class="reauth-email"> </span>
+            <input class="form-control" type="text" name="USER" required="" placeholder="CABLE or CORPHQ NT ID" id="username" tabindex="1" autofocus >
+            <input class="form-control" type="password" name="PASSWORD" required="" placeholder="Password" id="password" tabindex="2" >
+            <script type="text/javascript">
+            if(ReadCookie("SMTRYNO")!=0)
+            {
+                document.write("<p class='text-center'><strong>Incorrect User ID or Password</strong></p>");
+            }
+            </script>
+            <div class="checkbox">
+                <div class="checkbox">
+                    <label>
+                        <script type="text/javascript">
+                    if(! ReadCookie("userid"))
+                    {
+                        document.write("<input type='checkbox' tabindex='3' name='saveID' onclick='javascript:rememberUserID();'/>");
+                    } else
+                    {
+                        document.write("<input type='checkbox' checked='checked' tabindex='3' name='saveID' onclick='javascript:rememberUserID();'/>");
+
+document.getElementById("username").value =ReadCookie("userid");
+                }
+                    </script>
+
+
+                   </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://sso-login-test.cable.comcast.com/unprotect/form/oneclicksignin.html" target="_parent"><center>Need Help?</center></a>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" tabindex="4" >Sign in</button>
+            <input type=hidden name=target value="HTTPS://sso-login-test.cable.comcast.com/otk/otk_websec_extended_form/SSOLoginRedirect.aspx?env=websecdev&resume=/as/UGosg/resume/as/authorization.ping&spentity=null" />
+            <input type=hidden name=smquerydata value="" />
+            <input type=hidden name=smauthreason value="0" />
+            <input type=hidden name=smagentname value="iwa-pacdctestiis01-test" />
+            <input type=hidden name=postpreservationdata value="" />
+        </form></center>
+
+</div>
+    <div></div>
+    <div class="container">
+        <center><a href="https://wiki.sys.comcast.net/display/BSSCS/SSO+Options" target="_parent">Require SSO ? Onboarding</a></center>
+    </div>
+    <div class="container">
+        <center><font size="2">This system is solely for the use of Comcast employees or authorized contracted individuals. Comcast reserves the right at any time to monitor usage of this system to ensure compliance with this policy and all applicable Comcast policies which may apply.&nbsp;Your use of this system constitutes your acceptance of and agreement to all applicable Comcast policies as well as your consent to monitoring by Comcast. Any unauthorized use of this is strictly prohibited.</font></center>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+   </body>
